@@ -56,8 +56,8 @@
 
 
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#hris" class="nav-link"
-                    aria-controls="hris" role="button" aria-expanded="false">
+                <a data-bs-toggle="collapse" href="#hris" class="nav-link" aria-controls="hris" role="button"
+                    aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-ui-04 text-info text-sm opacity-10"></i>
                     </div>
@@ -66,10 +66,15 @@
                 <div class="collapse" id="hris">
                     <ul class="nav ms-4">
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('dapertemen') }}">
+                            <a class="nav-link" href="{{ route('dapertemen') }}">
                                 <span class="sidenav-mini-icon"> K </span>
-                                <span class="sidenav-normal"> Daprtemen </span>
+                                <span class="sidenav-normal"> Dapertemen </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('jabatan') }}">
+                                <span class="sidenav-mini-icon"> K </span>
+                                <span class="sidenav-normal"> Jabatan </span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -97,7 +102,7 @@
                             <a class="nav-link"
                                 href="https://demos.creative-tim.com/argon-dashboard-pro/pages/applications/analytics.html">
                                 <span class="sidenav-mini-icon"> A </span>
-                            <span class="sidenav-normal"> Perizinan </span>
+                                <span class="sidenav-normal"> Perizinan </span>
                             </a>
                         </li>
                     </ul>

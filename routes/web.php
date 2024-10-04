@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MasterModulController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\PositionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -58,6 +59,23 @@ Route::prefix('internal')
             ->name('dapertmene.destroy');
         Route::get('dapertemen/getDataById', [DapertemenController::class, 'getDataById'])
             ->name('dapertemen.getDataById');
+
+
+        Route::get('jabatan', [PositionController::class, 'index'])
+            ->name('jabatan');
+        Route::get('jabatan/data', [PositionController::class, 'data'])
+            ->name('jabatan.data');
+        Route::post('jabatan/store', [PositionController::class, 'store'])
+            ->name('jabatan.store');
+        Route::post('jabatan/destroy', [PositionController::class, 'destroy'])
+            ->name('jabatan.destroy');
+        Route::get('jabtan/getDataById', [PositionController::class, 'getDataById'])
+            ->name('jabatan.getDataById');
+        Route::post('jabatan/update', [PositionController::class, 'update'])
+            ->name('jabatan.update');
+        Route::get('jabatan/listDapertemen', [PositionController::class, 'listDapertemen'])
+        ->name('jabatan.listDapertemen');
+
 
 
         // permission
