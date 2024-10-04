@@ -28,7 +28,9 @@ class PositionController extends Controller
                 ->get();
 
             return datatables()->of($data)
-
+                ->addColumn('dapertemen', function ($data) {
+                    return $data->dapertemen;
+                })
                 ->addColumn('action', function ($data) {
                     $button = '<div class="d-flex justify-content-start">
                     <a class="btn btn-sm btn-warning mx-1" id="edit" data-id="' . $data->id . '">
@@ -44,13 +46,14 @@ class PositionController extends Controller
                     return $button;
                 })
                 ->addIndexColumn()
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'dapertemen'])
                 ->toJson();
         }
     }
 
     public function store(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'dapertemen' => 'required'

@@ -30,6 +30,10 @@
                 name: 'name'
             },
             {
+                data: 'dapertemen',
+                name: 'dapertemen'
+            },
+            {
                 data: 'action',
                 name: 'action'
             },
@@ -57,6 +61,7 @@
     $jquery('#tambahModal').on('hidden.bs.modal', function(event) {
         $jquery('#name_error').text('');
         $jquery('input.is-invalid').removeClass('is-invalid');
+        $jquery('#dapertemen').val('').trigger('change');
         $jquery('#form-store')[0].reset();
         $jquery('#tambahModal').modal('hide');
     })
@@ -76,7 +81,7 @@
             let formData = $jquery(this).serialize();
 
             $jquery.ajax({
-                url: '{{ route('permission.store') }}',
+                url: '{{ route('jabatan.store') }}',
                 method: 'POST',
                 data: formData,
                 success: function(response) {

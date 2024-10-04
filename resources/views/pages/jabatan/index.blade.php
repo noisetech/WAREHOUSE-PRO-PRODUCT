@@ -26,11 +26,12 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-borderless" style="width: 100%" id="example">
+                    <table class="table table-bordered" style="width: 100%" id="example">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Name</th>
+                                <th>Jabatan</th>
+                                <th>Dapertemen</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
