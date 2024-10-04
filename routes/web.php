@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DapertemenController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MasterModulController;
@@ -43,6 +44,20 @@ Route::prefix('internal')
             ->name('kategori.hapus');
         Route::get('kategori-produk/getDataById', [KategoriController::class, 'getDataById'])
             ->name('kategori-produk.getDataById');
+
+
+        Route::get('dapertemen', [DapertemenController::class, 'index'])
+            ->name('dapertemen');
+        Route::get('dapertemen/data', [DapertemenController::class, 'data'])
+            ->name('dapertemen.data');
+        Route::post('dapertemen/store', [DapertemenController::class, 'store'])
+            ->name('dapertemen.store');
+        Route::post('dapertemen/update', [DapertemenController::class, 'update'])
+            ->name('dapertmeen.update');
+        Route::post('dapertemen/destroy', [DapertemenController::class, 'destroy'])
+            ->name('dapertmene.destroy');
+        Route::get('dapertemen/getDataById', [DapertemenController::class, 'getDataById'])
+            ->name('dapertemen.getDataById');
 
 
         // permission

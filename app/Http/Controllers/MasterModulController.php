@@ -17,7 +17,8 @@ class MasterModulController extends Controller
     public function data(Request $request)
     {
         if ($request->ajax()) {
-            $data =
+            $data = DB::table('moduls')->select('*')->get();
+
         }
     }
 
