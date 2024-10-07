@@ -76,7 +76,6 @@ class ProductController extends Controller
                 'hpp' => $request->hpp
             ]);
 
-
             if ($request->has('image')) {
                 $image = $request->file('image')->store('assets/image-products', 'public');
 
@@ -84,7 +83,6 @@ class ProductController extends Controller
                     'image' => $image
                 ]);
             }
-
 
             DB::commit();
 

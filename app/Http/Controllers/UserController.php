@@ -152,14 +152,12 @@ class UserController extends Controller
                     'title' => 'success'
                 ], 200);
             } else {
-
                 $user = User::findOrFail($request->id);
                 $user->name = $request->name;
                 $user->email = $request->email;
                 $user->save();
                 $user->assignRole($request->role);
                 DB::commit();
-
 
                 return response()->json([
                     'status' => 'success',

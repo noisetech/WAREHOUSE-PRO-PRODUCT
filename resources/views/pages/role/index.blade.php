@@ -190,7 +190,7 @@
     <script>
         new DataTable('#example', {
             processing: true,
-            searching: false,
+            searching: false,   
             serverSide: true,
             fixedHeader: true,
             responsive: true,
