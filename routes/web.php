@@ -6,6 +6,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MasterModulController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -74,7 +75,7 @@ Route::prefix('internal')
         Route::post('jabatan/update', [PositionController::class, 'update'])
             ->name('jabatan.update');
         Route::get('jabatan/listDapertemen', [PositionController::class, 'listDapertemen'])
-        ->name('jabatan.listDapertemen');
+            ->name('jabatan.listDapertemen');
 
 
 
@@ -130,6 +131,9 @@ Route::prefix('internal')
             ->name('master-modul.data');
         Route::get('master-modul/store', [MasterModulController::class, 'store'])
             ->name('master-modul.store');
+
+        // profile
+        Route::resource('profile', ProfileController::class);
     });
 
 Auth::routes();
